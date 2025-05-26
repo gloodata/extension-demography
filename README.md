@@ -34,11 +34,17 @@ The project works with three main datasets:
 - Python 3.12 or higher
 - [uv](https://docs.astral.sh/uv/)
 
+Check that you are in a recent version of `uv`:
+
+```bash
+uv self update
+```
+
 ### Project Setup
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/marianoguerra/extension-demography.git
+   git clone https://github.com/gloodata/extension-demography.git
    cd extension-demography
    ```
 
