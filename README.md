@@ -4,15 +4,15 @@ A Python extension for [Gloodata](https://gloodata.com/) that displays fertility
 
 ![Extension Preview](https://raw.githubusercontent.com/gloodata/ext-py-demography/refs/heads/main/resources/ext-preview.webp)
 
-## Features
+## Tools
 
-- 🌍 **World Map** - Explore fertility rates across countries by year
-- 📊 **Population Pyramid** - Visualize age distribution by gender for any country and year
-- 📈 **Time Series Analysis** - Track demographic changes over time by age groups
-- 🗺️ **Country Information** - Detailed country metadata and statistics
-- 📋 **Country Directory** - Table of all countries with regional information
+- 🌍 **World Map** - Fertility rates across countries by year
+- 📊 **Population Pyramid** - Age distribution by gender for any country and year
+- 📈 **Time Series Analysis** - Demographic changes over time by age groups
+- ℹ️ **Country Information**
+- 📇 **Country Directory** - Table of all countries with regional information
 
-## Technologies Used
+## Technologies
 
 - Python
 - [DuckDB](https://duckdb.org/)
@@ -31,7 +31,7 @@ The project works with three main datasets:
 
 ### Prerequisites
 
-- Python 3.10 or higher
+- Python 3.12 or higher
 - [uv](https://docs.astral.sh/uv/)
 
 ### Project Setup
