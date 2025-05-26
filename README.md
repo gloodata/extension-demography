@@ -6,11 +6,11 @@ A Python extension for [Gloodata](https://gloodata.com/) that displays fertility
 
 ## Features
 
-🌍 **World Map** - Explore fertility rates across countries by year
-📊 **Population Pyramid** - Visualize age distribution by gender for any country and year
-📈 **Time Series Analysis** - Track demographic changes over time by age groups
-🗺️ **Country Information** - Detailed country metadata and statistics
-📋 **Country Directory** - Table of all countries with regional information
+- 🌍 **World Map** - Explore fertility rates across countries by year
+- 📊 **Population Pyramid** - Visualize age distribution by gender for any country and year
+- 📈 **Time Series Analysis** - Track demographic changes over time by age groups
+- 🗺️ **Country Information** - Detailed country metadata and statistics
+- 📋 **Country Directory** - Table of all countries with regional information
 
 ## Technologies Used
 
@@ -22,7 +22,9 @@ A Python extension for [Gloodata](https://gloodata.com/) that displays fertility
 
 The project works with three main datasets:
 - `countries.csv` - Country metadata (ISO codes, regions, etc.)
+- `demography-*.csv` - Raw demography data
 - `demography.parquet` - Population data by age groups, country, and year
+  - Processed with `datawrangler.py`
 - `fertility-rate.csv` - Fertility rates by country and year
 
 ## Setup and Installation
@@ -36,7 +38,7 @@ The project works with three main datasets:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/marianoguerra/extension-demography.git
    cd extension-demography
    ```
 
@@ -54,12 +56,16 @@ Interactive pyramid chart showing male/female population by age groups
 - "population pyramid for spain in 2023"
 - "demography for india in 1950"
 
+Tool: `demography_by_country_and_year`
+
 ### 2. World Fertility Map
 
 Choropleth world map with color-coded fertility rates
 
 - "world fertility for 2023"
 - "fertility in 1950"
+
+Tool: `world_fertility_by_year`
 
 ### 3. Demographic Time Series
 
@@ -68,6 +74,8 @@ Multi-line chart showing population trends by age group
 - "Demography timeserie for Spain"
 - "Italy's demography over the years"
 
+Tool: `demography_by_country_over_time`
+
 ### 4. Country Information
 
 Get detailed country information:
@@ -75,11 +83,15 @@ Get detailed country information:
 - "Information about Spain"
 - "Italy's info"
 
+Tool: `country_infobox`
+
 ### 5. Country Directory
 
 Browse all available countries:
 
 - "Show country table"
+
+Tool: `country_table`
 
 ## Development
 
