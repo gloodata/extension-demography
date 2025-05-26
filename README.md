@@ -1,0 +1,124 @@
+# Demography Data Explorer
+
+A Python extension for [Gloodata](https://gloodata.com/) that displays fertility and demographic data from [Our World in Data: Population & Demography Data Explorer](https://ourworldindata.org/explorers/population-and-demography).
+
+![Extension Preview](https://raw.githubusercontent.com/gloodata/ext-py-demography/refs/heads/main/resources/ext-preview.webp)
+
+## Features
+
+🌍 **World Map** - Explore fertility rates across countries by year
+📊 **Population Pyramid** - Visualize age distribution by gender for any country and year
+📈 **Time Series Analysis** - Track demographic changes over time by age groups
+🗺️ **Country Information** - Detailed country metadata and statistics
+📋 **Country Directory** - Table of all countries with regional information
+
+## Technologies Used
+
+- Python
+- [DuckDB](https://duckdb.org/)
+- [uv](https://docs.astral.sh/uv/)
+
+## Data Sources
+
+The project works with three main datasets:
+- `countries.csv` - Country metadata (ISO codes, regions, etc.)
+- `demography.parquet` - Population data by age groups, country, and year
+- `fertility-rate.csv` - Fertility rates by country and year
+
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.10 or higher
+- [uv](https://docs.astral.sh/uv/)
+
+### Project Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd extension-demography
+   ```
+
+2. **Run the extension**:
+   ```bash
+   uv run src/main.py
+   ```
+
+## Available Visualizations
+
+### 1. Population Pyramids
+
+Interactive pyramid chart showing male/female population by age groups
+
+- "population pyramid for spain in 2023"
+- "demography for india in 1950"
+
+### 2. World Fertility Map
+
+Choropleth world map with color-coded fertility rates
+
+- "world fertility for 2023"
+- "fertility in 1950"
+
+### 3. Demographic Time Series
+
+Multi-line chart showing population trends by age group
+
+- "Demography timeserie for Spain"
+- "Italy's demography over the years"
+
+### 4. Country Information
+
+Get detailed country information:
+
+- "Information about Spain"
+- "Italy's info"
+
+### 5. Country Directory
+
+Browse all available countries:
+
+- "Show country table"
+
+## Development
+
+### Project Structure
+
+Files you may want to check first:
+
+```
+extension-demography/
+├── src/
+│   └── toolbox.py          # Main extension logic
+├── datawrangler.py         # Script for merging `demography-*.csv` files into `demography.parquet`
+└── queries.sql             # SQL queries
+```
+
+### Regenerating demography.parquet
+
+
+```sh
+rm -f ./demography.parquet
+uv run datawrangler.py merge-demography-csvs -m ./demography-male.csv -f ./demography-female.csv -b ./demography-both.csv -o ./demography.parquet
+```
+
+For more information about the script:
+
+```sh
+uv run datawrangler.py -h
+```
+
+### Adding New Visualizations
+
+1. Define new SQL queries in `queries.sql`
+2. Create tool functions in `src/toolbox.py` using the `@tb.tool` decorator
+3. Specify visualization types and parameters in the return dictionary
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+For questions, issues, or contributions, please open an issue on GitHub or contact the maintainers.
