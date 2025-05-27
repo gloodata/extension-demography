@@ -1,4 +1,4 @@
-# Demography Data Explorer
+# Demography Data Explorer (Gloodata Extension)
 
 A Python extension for [Gloodata](https://gloodata.com/) that displays fertility and demographic data from [Our World in Data: Population & Demography Data Explorer](https://ourworldindata.org/explorers/population-and-demography).
 
