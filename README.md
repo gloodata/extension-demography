@@ -2,7 +2,7 @@
 
 A Python extension for [Gloodata](https://gloodata.com/) that displays fertility and demographic data from [Our World in Data: Population & Demography Data Explorer](https://ourworldindata.org/explorers/population-and-demography).
 
-![Extension Preview](https://raw.githubusercontent.com/gloodata/ext-py-demography/refs/heads/main/resources/ext-preview.webp)
+![Extension Preview](https://raw.githubusercontent.com/gloodata/extension-demography/refs/heads/main/resources/ext-preview.webp)
 
 ## Tools
 
@@ -52,6 +52,17 @@ uv self update
    ```bash
    uv run src/main.py
    ```
+
+Available environment variables and their defaults:
+
+- `EXTENSION_PORT`: `8089`
+- `EXTENSION_HOST`: `localhost`
+
+For example, to change the port:
+
+```sh
+EXTENSION_PORT=6677 uv run src/main.py
+```
 
 ## Available Visualizations
 
