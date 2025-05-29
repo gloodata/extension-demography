@@ -33,6 +33,7 @@ The project works with three main datasets:
 
 - Python 3.12 or higher
 - [uv](https://docs.astral.sh/uv/)
+- [Gloodata](https://gloodata.com/download/)
 
 Check that you are in a recent version of `uv`:
 
