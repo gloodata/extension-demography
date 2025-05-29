@@ -12,21 +12,6 @@ A Python extension for [Gloodata](https://gloodata.com/) that displays fertility
 - ℹ️ **Country Information**
 - 📇 **Country Directory** - Table of all countries with regional information
 
-## Technologies
-
-- Python
-- [DuckDB](https://duckdb.org/)
-- [uv](https://docs.astral.sh/uv/)
-
-## Data Sources
-
-The project works with three main datasets:
-- `countries.csv` - Country metadata (ISO codes, regions, etc.)
-- `demography-*.csv` - Raw demography data
-- `demography.parquet` - Population data by age groups, country, and year
-  - Processed with `datawrangler.py`
-- `fertility-rate.csv` - Fertility rates by country and year
-
 ## Setup and Installation
 
 ### Prerequisites
@@ -144,6 +129,21 @@ uv run datawrangler.py -h
 1. Define new SQL queries in `queries.sql`
 2. Create tool functions in `src/toolbox.py` using the `@tb.tool` decorator
 3. Specify visualization types and parameters in the return dictionary
+
+## Technologies
+
+- Python
+- [DuckDB](https://duckdb.org/)
+- [uv](https://docs.astral.sh/uv/)
+
+## Data Sources
+
+The project works with three main datasets:
+- `countries.csv` - Country metadata (ISO codes, regions, etc.)
+- `demography-*.csv` - Raw demography data
+- `demography.parquet` - Population data by age groups, country, and year
+  - Processed with `datawrangler.py`
+- `fertility-rate.csv` - Fertility rates by country and year
 
 ## License
 
