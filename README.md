@@ -2,9 +2,10 @@
 
 A Python extension for [Gloodata](https://gloodata.com/) that displays fertility and demographic data from [Our World in Data: Population & Demography Data Explorer](https://ourworldindata.org/explorers/population-and-demography).
 
+[🎥 Watch Youtube Demo](https://www.youtube.com/watch?v=fA06oOxKh3w)
+
 ![Extension Preview](https://raw.githubusercontent.com/gloodata/extension-demography/refs/heads/main/resources/ext-preview.webp)
 
-[🎥 Watch Youtube Demo](https://www.youtube.com/watch?v=fA06oOxKh3w)
 
 ## Tools
 
